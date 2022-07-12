@@ -13,3 +13,5 @@ do_configure:append:microblaze () {
 		install ${WORKDIR}/config.mk ${B}/source/board/xilinx/microblaze-generic/
 	fi
 }
+SRC_URI += "file://0002-added-new-line-to-cmd-bootmenu.c.patch file://0003-added-new-line-returns-to-rob-print-messages-in-comm.patch"
+

@@ -1,0 +1,25 @@
+From 45ebae1c311a7ed63005e1505ffc523af071c439 Mon Sep 17 00:00:00 2001
+From: Rob <support@risingedgeindustries.com>
+Date: Sat, 9 Jul 2022 14:34:00 -0700
+Subject: [PATCH] added new line returns to rob print messages in
+ common/autoboot.c
+
+---
+ common/autoboot.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/common/autoboot.c b/common/autoboot.c
+index a783933f1a..0ad4177d46 100644
+--- a/common/autoboot.c
++++ b/common/autoboot.c
+@@ -365,8 +365,8 @@ static int abortboot_single_key(int bootdelay)
+ 	int abort = 0;
+ 	unsigned long ts;
+ 
+-	printf("Hit any key to stop autoboot: %2d ", bootdelay);
+-	printf("--> Rob test message!");
++	printf("Hit any key to stop autoboot: %2d \n", bootdelay);
++	printf("--> Rob test message!\n");
+ 
+ 	/*
+ 	 * Check if key already pressed

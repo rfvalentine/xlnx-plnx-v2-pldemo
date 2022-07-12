@@ -1,0 +1,43 @@
+From 8343a4c28bb6d64ef04c8cd799cddb11056901c2 Mon Sep 17 00:00:00 2001
+From: Rob <support@risingedgeindustries.com>
+Date: Sat, 9 Jul 2022 14:13:40 -0700
+Subject: [PATCH] added rob printf messages
+
+---
+ cmd/bootmenu.c                 | 1 +
+ common/autoboot.c              | 1 +
+ include/configs/platform-top.h | 1 +
+ 3 files changed, 3 insertions(+)
+ create mode 100755 include/configs/platform-top.h
+
+diff --git a/cmd/bootmenu.c b/cmd/bootmenu.c
+index 409ef9a848..7d8b78c1b1 100644
+--- a/cmd/bootmenu.c
++++ b/cmd/bootmenu.c
+@@ -89,6 +89,7 @@ static void bootmenu_autoboot_loop(struct bootmenu_data *menu,
+ 	if (menu->delay > 0) {
+ 		printf(ANSI_CURSOR_POSITION, menu->count + 5, 1);
+ 		printf("  Hit any key to stop autoboot: %2d ", menu->delay);
++		printf("--> Rob test message!");
+ 	}
+ 
+ 	while (menu->delay > 0) {
+diff --git a/common/autoboot.c b/common/autoboot.c
+index 6251c68310..a783933f1a 100644
+--- a/common/autoboot.c
++++ b/common/autoboot.c
+@@ -366,6 +366,7 @@ static int abortboot_single_key(int bootdelay)
+ 	unsigned long ts;
+ 
+ 	printf("Hit any key to stop autoboot: %2d ", bootdelay);
++	printf("--> Rob test message!");
+ 
+ 	/*
+ 	 * Check if key already pressed
+diff --git a/include/configs/platform-top.h b/include/configs/platform-top.h
+new file mode 100755
+index 0000000000..0aa486a2b7
+--- /dev/null
++++ b/include/configs/platform-top.h
+@@ -0,0 +1 @@
++#include <configs/zynq-common.h>
