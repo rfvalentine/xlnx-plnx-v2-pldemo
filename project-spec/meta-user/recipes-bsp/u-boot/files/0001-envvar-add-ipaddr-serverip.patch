@@ -1,0 +1,31 @@
+From 3300c2d89afbbbb59d7f7f77c4c820dac6798edd Mon Sep 17 00:00:00 2001
+From: Rob <robert.f.valentine@gmail.com>
+Date: Tue, 12 Jul 2022 23:32:33 -0700
+Subject: [PATCH] envvar add ipaddr, serverip
+
+---
+ include/configs/platform-top.h | 1 +
+ include/configs/zynq-common.h  | 2 ++
+ 2 files changed, 3 insertions(+)
+ create mode 100755 include/configs/platform-top.h
+
+diff --git a/include/configs/platform-top.h b/include/configs/platform-top.h
+new file mode 100755
+index 0000000000..0aa486a2b7
+--- /dev/null
++++ b/include/configs/platform-top.h
+@@ -0,0 +1 @@
++#include <configs/zynq-common.h>
+diff --git a/include/configs/zynq-common.h b/include/configs/zynq-common.h
+index 4de2f94b04..9f6133b4f2 100644
+--- a/include/configs/zynq-common.h
++++ b/include/configs/zynq-common.h
+@@ -198,6 +198,8 @@
+ 	"kernel_addr_r=0x2000000\0"     \
+ 	"scriptaddr=0x3000000\0"        \
+ 	"ramdisk_addr_r=0x3100000\0"    \
++	"ipaddr=192.168.1.111\0"	\
++	"serverip=192.168.1.109\0"	\
+ 	BOOTENV
+ #endif
+ 
