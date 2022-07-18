@@ -19,6 +19,7 @@ This section covers all project configuration changes.
 
 
 
+
 <h3 align="left">BOOT ARGS</h3>
 
 Discuss boot args here.
