@@ -4,8 +4,7 @@
 <p align="center"><project description goes here!></p>
 
 
-# H3
-Repo Overview
+<h3 aligh="left">Repo Overview</h3>
 
 This repo is intended to capture usefull Petalinux confiuration settings and patches.
 
